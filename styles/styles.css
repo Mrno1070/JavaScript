@@ -1,0 +1,379 @@
+/* Generales */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.tipog {
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: rgb(0, 0, 0) 4px 3px 3px, #e486b2 -1px -1px 3px;
+}
+
+.Pos_absol{
+    position: absolute;
+}
+
+body {
+    background-color: rgb(82, 78, 78);
+}
+
+h1,
+h2 {
+    color: rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#botonIniSesion {
+    display: inline;
+}
+
+#botonCerSesion {
+    display: none;
+}
+
+#user {
+    color: white;
+    font-size: small;
+    display: none;
+}
+
+/* Divs / Diseño principal*/
+
+.CajaCentral {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "aside header header aside2"
+        "aside main main aside2"
+        "aside main main ."
+        "aside main main .";
+    justify-content: center;
+    align-content: center;
+    align-items: stretch;
+    justify-items: stretch;
+}
+
+/* HEADER */
+
+header {
+    grid-area: header;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 155px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.visor {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 0.3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". datos .";
+    border-radius: 35px;
+    border: white solid 1px;
+    color: #ff0000;
+    background-color: #ff0000;
+    box-shadow: rgb(255, 0, 0) 8px 8px 4px;
+    text-decoration: none;
+    height: 200px;
+    width: 762px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    left: -27px;
+}
+
+.datosPantalla {
+    grid-area: datos;
+    display: grid;
+    height: 80%;
+    width: 90%;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "signo entrada1"
+        "signo entrada2"
+        "barra barra"
+        ". resultado";
+    align-items: center;
+    justify-items: end;
+    overflow: hidden;
+}
+
+
+.sign {
+    grid-area: signo;
+    display: flex;
+    border: white 1px solid;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+
+.barra {
+    grid-area: barra;
+    color: white;
+}
+
+/*    MAIN      */
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.tablero {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "siete ocho nueve borrar"
+        "cuatro cinco seis suma"
+        "uno dos tres resta"
+        "multi cero divi igual";
+    grid-area: tablero;
+}
+
+/* IDEA PARA CANDADO SESION*/
+
+/* ASIDE IZQ */
+
+.aside {
+    grid-area: aside;
+    display: flex;
+    position: relative;
+    left: 15px;
+    top: 15px;
+    width: 85%;
+    height: 95%;
+    border-radius: 35px;
+    border: white solid 1px;
+    background-color: #ff0000;
+    box-shadow: rgb(24, 44, 105) 8px 8px 4px;
+    overflow: hidden;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+/* NAV  ==  LINK EXT*/
+nav {
+    display: flex;
+    height: 10%;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    text-align: center;
+}
+
+/* HISTORIAL */
+
+.listaHistorial {
+    display: flex;
+    width: 100%;
+    height: 70%;
+    list-style: circle;
+    color: white;
+    font-size: small;
+    flex-direction: column;
+    overflow-y: scroll;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.listaHistorial h1 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* FOOTER == FIRMA */
+
+footer {
+    display: flex;
+    height: 10%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.pFoot {
+    color: white;
+    font-size: small;
+}
+
+/* ASIDE DERECHA  ==  BOTONES EXTRAS   */
+
+.aside2 {
+    grid-area: aside2;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+/* POP UPs */
+
+.popup {
+    position: absolute;
+    top: 25vh;
+    left: 39vw;
+    height: 300px;
+    width: 400px;
+    background-color: #6ec0d9;
+    border-radius: 35px;
+    border: white solid 1px;
+    color: #ffffff;
+    text-decoration: none;
+    flex-direction: column;
+    align-items: center;
+
+    display: none;
+
+}
+
+.IniSesion {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+/*Estilos de buttons*/
+
+.button {
+    display: block;
+    background-color: #177a98;
+    border-radius: 35px;
+    border: white solid 1px;
+    color: rgb(255, 255, 255);
+    box-shadow: rgb(24, 44, 105) 8px 8px 4px;
+    padding: auto;
+    text-decoration: none;
+    margin: 10px;
+    height: 100px;
+    width: 150px;
+}
+
+
+/* GRID AREAS */
+.entr1 {
+    grid-area: entrada1;
+}
+
+.entr2 {
+    grid-area: entrada2;
+}
+
+.result {
+    grid-area: resultado;
+}
+
+.uno {
+    grid-area: uno;
+}
+
+.dos {
+    grid-area: dos;
+}
+
+.tres {
+    grid-area: tres;
+}
+
+.cuatro {
+    grid-area: cuatro;
+}
+
+.cinco {
+    grid-area: cinco;
+}
+
+.seis {
+    grid-area: seis;
+}
+
+.siete {
+    grid-area: siete;
+}
+
+.ocho {
+    grid-area: ocho;
+}
+
+.nueve {
+    grid-area: nueve;
+}
+
+.cero {
+    grid-area: cero;
+}
+
+.suma {
+    grid-area: suma;
+}
+
+.resta {
+    grid-area: resta;
+}
+
+.igual {
+    grid-area: igual;
+}
+
+.multi {
+    grid-area: multi;
+}
+
+.divi {
+    grid-area: divi;
+}
+
+.borrar {
+    grid-area: borrar;
+}
+
+.iniSesion {
+    grid-area: inisesion;
+}

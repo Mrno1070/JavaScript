@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Calculadora - Mariano Iervasi</title>
+</head>
+
+<body id="body">
+
+    <div class="CajaCentral">
+
+        <aside class="aside">
+
+            <nav>
+                <a class="tipog" href="./cientifica.html">Canculadora cientifica</a>
+            </nav>
+
+            <p id="user"></p>
+
+            <h1 class="tipog">Historial:</h1>
+            <div class="listaHistorial" id="historial">
+            </div>
+
+            <footer>
+                <p class="pFoot">·Derechos de autor Mariano Iervasi</p>
+            </footer>
+
+        </aside>
+
+        <header>
+
+            <div class="visor">
+
+                <div class="datosPantalla">
+
+                    <h2 class="entr1 tipog" id="entr1"></h2>
+                    <h2 class="sign tipog" id="signo"></h2>
+                    <h2 class="entr2 tipog" id="entr2"></h2>
+                    <p class="barra tipog">__________________________</p>
+                    <h2 class="result tipog " id="resultado"></h2>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <main>
+            <div class="tablero">
+
+                <div class="uno">
+
+                    <button class="tipog button" onfocus="this.blur()" onclick="Interpretar(1)">1</button>
+
+                </div>
+
+                <div class="dos">
+
+                    <button class="tipog button" onfocus="this.blur()" onclick="Interpretar(2)">2</button>
+
+                </div>
+
+                <div class="tres">
+
+                    <button class="tipog button" onfocus="this.blur()" onclick="Interpretar(3)">3</button>
+
+                </div>
+
+                <div class="cuatro">
+
+                    <button class="tipog button" onfocus="this.blur()" onclick="Interpretar(4)">4</button>
+
+                </div>
+
+                <div class="cinco">
+
+                    <button class="tipog button" onfocus="this.blur()" onclick="Interpretar(5)">5</button>
+
+                </div>
+
+                <div class="seis">
+
+                    <button class="tipog button" onfocus="this.blur()" onclick="Interpretar(6)">6</button>
+
+                </div>
+
+                <div class="siete">
+
+                    <button class="tipog button" onfocus="this.blur()" onclick="Interpretar(7)">7</button>
+
+                </div>
+
+                <div class="ocho">
+
+                    <button class="tipog button" onfocus="this.blur()" onclick="Interpretar(8)">8</button>
+
+                </div>
+
+                <div class="nueve">
+
+                    <button class="tipog button" onfocus="this.blur()" onclick="Interpretar(9)">9</button>
+
+                </div>
+
+                <div class="cero">
+
+                    <button class="tipog button" onfocus="this.blur()" onclick="Interpretar(0)">0</button>
+
+                </div>
+
+                <div class="suma">
+
+                    <button class="tipog button" onfocus="this.blur()" onclick="Interpretar('+')">+</button>
+
+                </div>
+
+                <div class="divi">
+
+                    <button class="tipog button" onfocus="this.blur()" onclick="Interpretar('/')">/</button>
+
+                </div>
+
+                <div class="multi">
+
+                    <button class="tipog button" onfocus="this.blur()" onclick="Interpretar('*')">*</button>
+
+                </div>
+
+                <div class="resta">
+
+                    <button class="tipog button" onfocus="this.blur()" onclick="Interpretar('-')">-</button>
+
+                </div>
+
+                <div class="igual" id="igual">
+
+                    <button class="tipog button" onfocus="this.blur()" onclick="Interpretar('Enter')">=</button>
+
+                </div>
+
+                <div class="borrar">
+
+                    <button class="tipog button" onfocus="this.blur()"
+                        onclick="Interpretar('Backspace')">&larr;</button>
+
+                </div>
+
+            </div>
+        </main>
+
+        <aside class="aside2">
+            <div class="botonera">
+                <button class="tipog button" onfocus="this.blur()" onclick="MostrarPopUp()" id="botonIniSesion">Iniciar
+                    Sesion</button>
+                <button class="tipog button" onfocus="this.blur()" onclick="CerrarSesion()" id="botonCerSesion">Cerrar
+                    Sesion</button>
+            </div>
+            <button class="tipog button" onfocus="this.blur()" onclick="Interpretar('Delete')">CE</button>
+            <button class="tipog button" onfocus="this.blur()" onclick="Interpretar('DMR')">Dato Matematico
+                Random</button>
+        </aside>
+
+        <div class="popup" id="popup">
+            <div class="IniSesion" id="CartelIniSesion">
+                <button class="tipog button" onfocus="this.blur()" onclick="IniciarSesion()">Ya tengo cuenta</button>
+                <button class="tipog button" onfocus="this.blur()" onclick="Registrarse()">Registro</button>
+            </div>
+            <button class="tipog button" onclick="Cls()">Limpiar datos</button>
+            <button class="tipog button" onclick="OcultarPopup()">Cerrar</button>
+
+        </div>
+
+    </div>
+
+    <script class="Pos_absol" src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
